@@ -16,27 +16,43 @@ n	    result
 */
 
 // 풀이 1
-// const solution = (n) => {
-//   const divisors = [];
-//   for (let i = 0; i <= n; i++) {
-//     if (n % i === 0) divisors.push(i);
-//   }
-//   //   console.log(divisors);
-//   return divisors.length;
-// };
-// // console.log(solution(20));
+const solution = (n) => {
+  const divisors = [];
+  for (let i = 0; i <= n; i++) {
+    if (n % i === 0) divisors.push(i);
+  }
+  return divisors.length;
+};
 
 // 풀이 2
 const solution = (n) => {
-  const divisors = [];
-  for (let i = 0; i <= Math.ceil(n ** 0.5); i++) {
-    if (n % i === 0) divisors.push(i);
+  let divisors = 0;
+  for (let i = 0; i <= n; i++) {
+    if (n % i === 0) divisors++;
   }
-  console.log(divisors);
-
-  return divisors.length % 2
-    ? divisors.length * 2 - 1
-    : (divisors.length - 1) * 2;
+  return divisors;
 };
-console.log(solution(20));
-console.log(solution(100));
+
+// 풀이 3
+// 제곱근 활용하여 시간복잡도 개선
+const solution = (n) => {
+  let divisors = 0;
+  for (let i = 0; i < n ** 0.5; i++) {
+    if (n % i === 0) divisors++;
+  }
+  divisors = divisors * 2;
+  if (Number.isInteger(n ** 0.5)) divisors++;
+
+  return divisors;
+};
+
+// 풀이 4
+// 풀이 3 최적화
+function solution(n) {
+  let ans = 0;
+  for (let i = 1; i < Math.sqrt(n); i++) {
+    if (n % i === 0) ans += 2;
+  }
+
+  return Number.isInteger(Math.sqrt(n)) ? ans + 1 : ans;
+}
