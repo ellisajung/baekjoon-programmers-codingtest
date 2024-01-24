@@ -60,6 +60,7 @@ console.log(solution(10, 50, 5));
 // 풀이 3
 // Array.prototype.fill
 // String.prototype.split
+// split 여집합 활용하기!!
 function solution(i, j, k) {
   return (
     Array(j - i + 1)
@@ -71,6 +72,7 @@ function solution(i, j, k) {
 }
 
 // 풀이 4
+// split 여집합 활용하기!!
 function solution(i, j, k) {
   let a = "";
   for (i; i <= j; i++) a += i;
