@@ -28,10 +28,17 @@ d	            budget	result
 [2,2,3,3]	    10	    4 
 */
 
+// 풀이 1
 const solution = (d, budget) => {
   d = d.sort((a, b) => a - b);
   let answer = 0;
+  let count = 0;
   while (answer <= budget) {
-    for (let i = 0; i <= d.length; i++) answer += d[i];
+    answer += d[count];
+    count++;
+    // console.log(answer, count);
   }
+  return count - 1;
 };
+
+solution([1, 3, 2, 5, 4], 9);
