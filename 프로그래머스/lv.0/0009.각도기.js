@@ -17,8 +17,8 @@ Description
 angle은 정수입니다.
 
 입출력 예
-angle	result
-70  	1
+angle	  result
+70  	  1
 91	    3
 180	    4 
 */
