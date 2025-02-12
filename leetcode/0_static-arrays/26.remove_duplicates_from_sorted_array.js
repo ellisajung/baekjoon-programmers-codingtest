@@ -1,8 +1,6 @@
-/*
-26. Remove Duplicates from Sorted Array 
+/* 26. Remove Duplicates from Sorted Array 
 
 Notes
-
 1.pop()과 같은 메서드 또는 delete 사용시 희소배열 만드는지?
 2.배열의 length 프로퍼티는 유효한 값만 세는지?
   // const num = [1, , 2, 3];

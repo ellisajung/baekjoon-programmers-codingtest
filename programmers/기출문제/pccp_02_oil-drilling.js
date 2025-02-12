@@ -149,3 +149,19 @@ console.log(transposeMatrix(land));
 //   [1, 0, 0, 0, 0, 0, 1],
 //   [1, 0, 1, 0, 1, 0, 1],
 // ];
+
+// 풀이 3
+// borehole 위치에 따른 obtain 할 수 있는 chunks 배열 구하기
+// 1차원 배열 순회하며
+// 오른쪽, 아래 체크
+// 값이 1이면 -> 오른쪽 순회 (1 더해주며 2차원 배열 계속해서 순회)
+// 오른쪽 순회 끝나면 -> 처음 순회한 값에서 아래쪽 순회
+// 값 끊길 때마다 이때까지 더한 값을 
+// (현재 borehole - 1)를 인덱스로 하는 배열에 push
+// 현재 borehole = 순회 중인 2차원 배열 인덱스
+// 그러려먼 먼저, (현재 borehole - 1)를 인덱스로 하는 2차원 배열 초기화
+
+const solution = (land) => {
+  const obtainedChunks = []
+  for (let ) 
+}
